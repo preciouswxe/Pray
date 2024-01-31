@@ -1,0 +1,9 @@
+<h1 style='color:blue'>Hello Golang!!</h1>
+<h2>how are youuuuuuuuuuuuuuuu</h2>
+<img id='i1' src='https://appimg.dzwww.com/dzcloud/20210119/53368ab2620cf5674ca8c6b0964318bd.jpg'>
+<button id='b1'>点击领取赛博男友</button>
+<script>
+document.getElementById('b1').onclick=function(){
+    document.getElementById('i1').src='https://appimg.dzwww.com/dzcloud/20210119/e85d8388e2f020061cca7ec7de775d06.jpg'
+}
+</script>
