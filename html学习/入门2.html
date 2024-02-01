@@ -16,7 +16,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        background: url("下载 (8).png")no-repeat center center;
+        background: url("图片/下载 (8).png")no-repeat center center;
         /*background-repeat: no-repeat; /* 不重复 */
         /*background-position:  center center; /* 居中 */
         /*background-size: 100% 100%; /* 覆盖整个元素 */
@@ -35,11 +35,13 @@
     </style>
 
         <!--设置整体表单-->
-    <style type="text/css">
+    <style type="text/css"> 
         fieldset
         {
+            /*background-color: #ffff;*/
+            opacity: 0.9;
             margin:30px auto;
-            border-style:outset;border-radius: 20px;
+            border-style:outset;
             width:600px;
             height:400px;
             padding:20px auto;
@@ -49,8 +51,8 @@
         }
 
         legend {
-        color: rgb(202, 107, 164); /* 设置<legend>元素就是外边框的文本颜色为红色  但是没有采用已经删掉*/
-        }
+            color: rgb(202, 107, 164); /* 设置<legend>元素就是外边框的文本颜色为红色  但是没有采用已经删掉*/
+                    }
 
 
         /*label部分CSS才是重点*/
@@ -147,7 +149,7 @@
 
     <div class="topnav">
         <div class="img">
-            <img src="logoIcon.png" style="height: 60px;position: relative; top: px; left: 250px;" alt="无法显示">
+            <img src="图片/logoIcon.png" style="height: 60px;position: relative; top: px; left: 250px;" alt="无法显示">
         </div>
         <a href="#">排名</a>
         <a href="#">评测记录</a>
@@ -186,15 +188,15 @@
             <br><br>
        
             <!-- 单选按钮 -->
-            <label style="width:80px;">登录方式:</label>
+            <label style="position: fixed;left:670px;width:90px;">登录方式 ：</label>
             
             <input type="radio" id="dl" name="fs" value="dl" checked>
-            <label for="dl" style="width:50px;">登录</label>
+            <label for="dl" style="width:40px;">登录</label>
             <input type="radio" id="dl" name="fs" value="zc">
             <label for="zc" style="width:80px;">自动注册</label>
             
 
-        <br><br>
+        <br><br><br>
             <input type="checkbox" id="subscribe" name="subscribe" checked>
             <label for="subscribe" style="width:70px;">记住密码</label>
 
@@ -209,17 +211,25 @@
             
             <button class="button"><span>LOGIN IT</span></button>
 
-            <br><br>
+            <br>
 
         <!-- 复选框 -->
             <input type="checkbox" id="subscribe" name="subscribe" style="margin-left: -300px;margin-top: 50px" checked>
-            <label for="subscribe">是否同意<br>
-            <a href="https://zhuanlan.zhihu.com/p/540432837"><i>用户协议等条款</i></a></label>
+            <label for="subscribe" style="width: 220px;">是否同意
+            <a href="https://zhuanlan.zhihu.com/p/540432837"><i>用户协议和隐私政策</i></a></label>
+
+            <p style="position:fixed;left:900px;top:497px;">其他方式登录：
+                <a href="#"><img src="图片/R-C (2).png" style="width: 30px;"></a>
+                <a href="#"><img src="图片/R-C (1).png" style="width: 30px;"></a>
+            
+            </p>
             
 
-          
         </form>
     </fieldset>
+
+        <a href="#"><img src="图片/erweima.jpg" style="width: 320px;height:400px;position:fixed;left:200px;top:160px;"></a>
+        <p style="width: 300px;height:400px;position:fixed;left:210px;top:500px;">请使用<a href="http://hdufhq.cn:8888">孵化器客户端</a>扫描二维码登录</p>
 
         <p style="position:fixed; bottom:30px; left: 780px;"><i>Designed by wxe</i></p>
         <p style="position:fixed; bottom:0px; left:750px;"><a href="http://hdufhq.cn:8888">！戳这里访问泥电孵化器地址</a></p>
