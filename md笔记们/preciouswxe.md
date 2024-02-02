@@ -28,7 +28,7 @@
 
 随机输入账号密码 没有专门设置对错  会跳转到到我的vscode代码文件夹
 
-<img src="file:///C:/Users/13561/AppData/Roaming/marktext/images/2024-01-30-10-51-08-image.png" title="" alt="" width="678">
+<img title="" src="笔记图片/2024-01-30-10-54-08-image.png" alt="">
 
 用户条款和忘记密码的跳转被我设置到一些相关的页面，知乎啊csdn啥的了
 
