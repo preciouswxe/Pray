@@ -2,23 +2,19 @@
 
 # 最终结果展示（全屏情况）纯净版本
 
-![](C:\Users\13561\AppData\Roaming\marktext\images\b1bb8017536c12e5d874f448f9f71519600efa5e.png)
-
 ## 如果给fieldset添加颜色
-
-![](C:\Users\13561\AppData\Roaming\marktext\images\6f07e8f9e55ab99e25e5c253b0000202ef37ada3.png)
 
 ## 如果在之上去掉背景
 
-![](C:\Users\13561\AppData\Roaming\marktext\images\a52e7d2964e1afee1cbec4506a64aa00bcff6f40.png)
-
 ## 咳咳 其实还有蓝色版本
-
-![](C:\Users\13561\AppData\Roaming\marktext\images\d0574a4fd40dfda3bc1be83a7ebd66e47df494cd.png)
 
 按键可以按动
 
- ![](C:\Users\13561\AppData\Roaming\marktext\images\b39b3bc622f78774a8deb30a9cedda21157162f1.png) 
+>  以上因为传输问题我无法展示 图片放在对应我的仓库文件夹md笔记们里  真是太邪门了设置路径又变回去了
+
+
+
+>  不过可以直接访问我搭好的地址[Document (preciouswxe.github.io)](https://preciouswxe.github.io/html_show/)
 
 ## 跳转部分
 
