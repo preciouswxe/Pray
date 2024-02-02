@@ -2,23 +2,23 @@
 
 # 最终结果展示（全屏情况）纯净版本
 
-![](C:\Users\13561\AppData\Roaming\marktext\images\2024-01-31-23-34-16-image.png)
+![](C:\Users\13561\AppData\Roaming\marktext\images\b1bb8017536c12e5d874f448f9f71519600efa5e.png)
 
 ## 如果给fieldset添加颜色
 
-![](C:\Users\13561\AppData\Roaming\marktext\images\2024-01-31-23-34-45-image.png)
+![](C:\Users\13561\AppData\Roaming\marktext\images\6f07e8f9e55ab99e25e5c253b0000202ef37ada3.png)
 
 ## 如果在之上去掉背景
 
-![](C:\Users\13561\AppData\Roaming\marktext\images\2024-01-31-23-35-14-image.png)
+![](C:\Users\13561\AppData\Roaming\marktext\images\a52e7d2964e1afee1cbec4506a64aa00bcff6f40.png)
 
 ## 咳咳 其实还有蓝色版本
 
-![](C:\Users\13561\AppData\Roaming\marktext\images\2024-01-31-17-13-34-image.png)
+![](C:\Users\13561\AppData\Roaming\marktext\images\d0574a4fd40dfda3bc1be83a7ebd66e47df494cd.png)
 
 按键可以按动
 
- ![](C:\Users\13561\AppData\Roaming\marktext\images\2024-01-30-10-47-46-image.png) 
+ ![](C:\Users\13561\AppData\Roaming\marktext\images\b39b3bc622f78774a8deb30a9cedda21157162f1.png) 
 
 ## 跳转部分
 
@@ -26,17 +26,13 @@
 
 左上角logo是从实验室那边嫖下载的，没有设置跳转实验室的链接，底部的跳转链接可以跳转到实验室
 
-随机输入账号密码 没有专门设置对错  会跳转到到我的vscode代码文件夹
-
-<img title="" src="笔记图片/2024-01-30-10-54-08-image.png" alt="">
+随机输入账号密码 没有专门设置对错  点击login但是不会有反应因为布置静态pages的时候没有多的文件夹可以访问进去
 
 用户条款和忘记密码的跳转被我设置到一些相关的页面，知乎啊csdn啥的了
 
 ## 补充
 
 时间不太够 没设计后端 可以后面写
-
-所有图片都是被我放在我html学习文件夹一起的 所以要用代码试试登陆界面的话得下载好图片（我贴在最后面）
 
 ---
 
@@ -282,17 +278,3 @@
 
 </html>
 ```
-
----
-
-# 使用图片
-
-<img src="file:///D:/代码！/html学习/图片/erweima.jpg" title="" alt="erweima.jpg" width="616">
-
-![logoIcon.png](D:\代码！\html学习\图片\logoIcon.png)
-
-![R-C (1).png](D:\代码！\html学习\图片\R-C%20(1).png)
-
-![R-C (2).png](D:\代码！\html学习\图片\R-C%20(2).png)
-
-![下载 (8).png](D:\代码！\html学习\图片\下载%20(8).png)
