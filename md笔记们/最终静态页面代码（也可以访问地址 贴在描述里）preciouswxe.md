@@ -12,8 +12,6 @@
 
 >  以上因为传输问题我无法展示 图片放在对应我的仓库文件夹md笔记们里  真是太邪门了设置路径又变回去了
 
-
-
 >  不过可以直接访问我搭好的地址[Document (preciouswxe.github.io)](https://preciouswxe.github.io/html_show/)
 
 ## 跳转部分
