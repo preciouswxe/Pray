@@ -22,7 +22,7 @@ func f1(w http.ResponseWriter, r *http.Request) {
 	
 
 	//解析模板
-	_, err := t.ParseFiles("./web06/f.tmpl")
+	_, err := t.ParseFiles("./beforelearn/web06/f.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed, err:%v\n", err)
 		return
@@ -37,7 +37,7 @@ func f1(w http.ResponseWriter, r *http.Request) {
 func demo1(w http.ResponseWriter,r *http.Request){
 	//定义模板
 	//解析模板
-	t,err := template.ParseFiles("./web06/t.tmpl","./web06/ul.tmpl")
+	t,err := template.ParseFiles("./beforelearn/web06/t.tmpl","./web06/ul.tmpl")
 	if err != nil{
 		fmt.Printf("parse template failed,err:%v",err)
 		return

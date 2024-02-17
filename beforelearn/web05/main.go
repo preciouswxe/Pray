@@ -15,7 +15,7 @@ type User struct {
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	//定义模板
 	//解析模板
-	t, err := template.ParseFiles("./web05/hello.tmpl")
+	t, err := template.ParseFiles("./beforelearn/web05/hello.tmpl")
 	if err != nil {
 		fmt.Println("parse template failed,err:%v", err)
 	}

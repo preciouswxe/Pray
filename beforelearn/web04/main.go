@@ -9,7 +9,7 @@ import (
 
 func sayHello(w http.ResponseWriter, r *http.Request){
 	//先解析模板
-    t , err := template.ParseFiles("./web04/hello.tmpl")   //请勿刻舟求剑
+    t , err := template.ParseFiles("./beforelearn/web04/hello.tmpl")   //请勿刻舟求剑
 	if err != nil{
 		fmt.Println("Parse template failed,err:%v",err)
 		return 

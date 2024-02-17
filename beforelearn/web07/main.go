@@ -9,7 +9,7 @@ import(
 func index(w http.ResponseWriter,r *http.Request){
     //定义模板
 	//解析模板
-	t,err := template.ParseFiles("./web07/index.tmpl")
+	t,err := template.ParseFiles("./beforelearn/web07/index.tmpl")
     if err != nil {
 		fmt.Printf("parse template failed,err:%v",err)
 		return
@@ -22,7 +22,7 @@ func index(w http.ResponseWriter,r *http.Request){
 func home(w http.ResponseWriter,r *http.Request){
     //定义模板
 	//解析模板
-	t,err := template.ParseFiles("./web07/home.tmpl")
+	t,err := template.ParseFiles("./beforelearn/web07/home.tmpl")
     if err != nil {
 		fmt.Printf("parse template failed,err:%v",err)
 		return
@@ -35,7 +35,7 @@ func home(w http.ResponseWriter,r *http.Request){
 func index2(w http.ResponseWriter,r *http.Request){
     //定义模板（模板继承的方式）
 	//解析模板
-	t,err := template.ParseFiles("./web07/templates/base.tmpl","./web07/templates/index2.tmpl")
+	t,err := template.ParseFiles("./beforelearn/web07/templates/base.tmpl","./web07/templates/index2.tmpl")
 	if err !=  nil{
 		fmt.Printf("parse template failed,err:%v",err)
 		return
@@ -48,7 +48,7 @@ func index2(w http.ResponseWriter,r *http.Request){
 func home2(w http.ResponseWriter,r *http.Request){
     //定义模板（模板继承的方式）
 	//解析模板
-	t,err := template.ParseFiles("./web07/templates/base.tmpl","./web07/templates/home2.tmpl")
+	t,err := template.ParseFiles("./beforelearn/web07/templates/base.tmpl","./web07/templates/home2.tmpl")
 	if err !=  nil{
 		fmt.Printf("parse template failed,err:%v",err)
 		return
