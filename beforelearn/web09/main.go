@@ -15,7 +15,7 @@ func main() {
 	//解析模板
 
    	//加载静态文件
-	r.Static("/xxx","./web09/statics")
+	r.Static("statics","/statics")
 
     //先给gin框架中模板添加自定义函数
 	r.SetFuncMap(template.FuncMap{
@@ -27,7 +27,7 @@ func main() {
 
 	//旧方法解析r.LoadHTMLFiles("./web09/templates/index.tmpl")
 
-	r.LoadHTMLGlob("web09/***/**/*") //意思是直接加载这个web09下面的所有文件 不用具体指定路径了
+	r.LoadHTMLGlob("templates/**/*") //意思是直接加载这个web09下面的所有文件 不用具体指定路径了
 
 	//渲染模板  在这里写上浏览器上url后小截
 	r.GET("/posts/index", func(c *gin.Context) {
