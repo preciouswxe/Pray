@@ -1,9 +1,18 @@
+/*
+ * @Author: 13561 1356137745@qq.com
+ * @Date: 2024-02-13 22:15:00
+ * @LastEditors: 13561 1356137745@qq.com
+ * @LastEditTime: 2024-02-28 16:21:36
+ * @FilePath: \代码！\beforelearn\web09\main.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 package main
 
 import (
 	"net/http"
-	
-    "html/template"
+
+	"html/template"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -11,19 +20,18 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 	//创建一个默认路由
 	r := gin.Default()
-    
+
 	//解析模板
 
-   	//加载静态文件
-	r.Static("statics","/statics")
+	//加载静态文件
+	r.Static("statics", "/statics")
 
-    //先给gin框架中模板添加自定义函数
+	//先给gin框架中模板添加自定义函数
 	r.SetFuncMap(template.FuncMap{
-		"safe" : func(str string) template.HTML{
-		    return template.HTML(str)
+		"safe": func(str string) template.HTML {
+			return template.HTML(str)
 		},
 	})
-
 
 	//旧方法解析r.LoadHTMLFiles("./web09/templates/index.tmpl")
 
@@ -47,9 +55,9 @@ func main() {
 
 	})
 
-    //返回从网上下载的模板,没有需要上传的数据，所以是nil
-	r.GET("/home",func(c *gin.Context){
-		c.HTML(http.StatusOK,"posts/home.html",nil)
+	//返回从网上下载的模板,没有需要上传的数据，所以是nil
+	r.GET("/home", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "posts/home.html", nil)
 	})
 
 	//启动server 这里浏览器就是客户端 本机是服务器

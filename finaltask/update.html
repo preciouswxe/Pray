@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="statics/66.jpg"/>
+  <title>Update finaltask_student</title>
+  <style>
+    .background{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("statics/R-C.jpg")no-repeat center center/cover;
+        /*background-attachment: fixed;
+        background-size: cover; /* 可选，用于确保背景图片覆盖整个屏幕 */
+        /*background-repeat: no-repeat; /* 不重复 */
+        /*background-position:  center center; /* 居中 */
+        /*background-size: 100% 100%; /* 覆盖整个元素 */
+        /*background-attachment: fixed;*/
+        /*background-repeat:no-repeat;*/
+        z-index: -1; /* 将 z-index 设置为负值，使背景图片位于内容下方 */
+        }
+    #login_box {
+      width: 20%;
+      height: 400px;
+      background-color: #f8ededbc;
+      margin: auto;
+      margin-top: 10%;
+      text-align: center;
+      border-radius: 10px;
+      padding: 50px 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #efb1d1d3;
+      margin-top: 5%;
+    }
+
+    #input-box {
+      margin-top: 5%;
+    }
+
+    span {
+      color: #fff;
+    }
+
+    input {
+      border: 0;
+      width: 60%;
+      font-size: 15px;
+      color: #fff;
+      background: transparent;
+      border-bottom: 2px solid #cdc1c1;  /*横线颜色*/
+      padding: 5px 10px;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 50px;
+      width: 60%;
+      height: 30px;
+      border-radius: 10px;
+      border: 0;
+      color: #d0caca;
+      text-align: center;
+      line-height: 30px;
+      font-size: 15px;
+      background-image: linear-gradient(to right, #30cfd0, #330867);
+    }
+
+    #sign_up {
+      margin-top: 45%;
+      margin-left: 60%;
+    }
+
+    a {
+      color: #d0bcbc;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div id="login_box">
+    <h2>Change Information</h2>
+
+    <form action="/update" method="post" novalidate autocomplete="off">
+    
+      <span id="idDisplay" style="color:coral"></span>
+      <p style="font-size: 12px;font-family: FangSong;color:rgb(133, 127, 124)">(学号作为主键不可修改)</p>
+
+      <div class="input_box">
+      <input type="text" name="name" placeholder="请输入新的姓名">
+      </div>
+      <div class="input_box">
+      <input type="text" name="age" placeholder="请输入新的年龄">
+      </div>
+
+      <!-- 隐藏的 input 用于传递 ID -->
+      <input type="hidden" name="id" id="studentId">
+
+      <button>更新 deliver it...</button><br>
+    
+    </form>
+
+    <script>
+        // 获取 URL 中的参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+
+        // 将获取到的 ID 显示在页面上
+        document.getElementById('idDisplay').innerText = `学号为：${id}`;
+        // 将 ID 设置到隐藏的 input 中，以便提交表单时一起传递
+        document.getElementById('studentId').value = id;
+    </script>
+
+    
+    <p style="text-align: center;left:710px;position:fixed;bottom:10px;font-size:12px;color:rgb(192, 178, 178);">Copyright © 2024 prexiouswxe.Powered by fhq. 
+      <br> All rights reserved.</p>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="statics/66.jpg"/>
+    <link rel="stylesheet" href="statics/button.css">   <!-- 引入按钮的样式表 -->
+    <title>Student Information</title>
+
+    <style>
+        .background{
+            position:fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("statics/R-C.jpg")no-repeat center center/cover;
+            /*background-attachment: fixed;
+            background-size: cover; /* 可选，用于确保背景图片覆盖整个屏幕 */
+            /*background-repeat: no-repeat; /* 不重复 */
+            /*background-position:  center center; /* 居中 */
+            /*background-size: 100% 100%; /* 覆盖整个元素 */
+            /*background-attachment: fixed;*/
+            /*background-repeat:no-repeat;*/
+            z-index: -1; /* 将 z-index 设置为负值，使背景图片位于内容下方 */
+        }
+        p{
+            text-align: center;
+        }
+    
+        table {
+            margin: 0 auto; /* 设置表格水平居中 */
+            text-align: center; /* 设置表格内部内容水平居中 */
+            background-color:rgba(244, 245, 245, 0.694);
+            box-shadow:1px 2px 5px #867979;
+        }
+        th, td {
+            padding: 10px; /* 设置单元格内边距 */
+        }
+        th:nth-child(1) {
+        background-color: #f3dbe8; /* 第一列的背景颜色 */
+        color: rgb(109, 105, 105); /* 第一列文字颜色为白色 */
+        width: 200px;
+        }
+
+        th:nth-child(2) {
+        background-color: #ebc1e0; /* 第二列的背景颜色 */
+        color: rgb(109, 105, 105); /* 第二列文字颜色为白色 */
+        width: 200px;
+        }
+
+        th:nth-child(3) {
+        background-color: #dba0cd; /* 第三列的背景颜色 */
+        color: rgb(109, 105, 105); /* 第三列文字颜色为白色 */
+        width: 200px;
+        }
+
+        th:nth-child(4) {
+        background-color: #ad5c9a; /* 第三列的背景颜色 */
+        color: rgb(204, 200, 200); /* 第三列文字颜色为白色 */
+        width: 400px;
+        }
+    </style>
+
+<!--按钮设置样式-->
+</head>
+
+<body>
+    <div class="background"></div>
+    <h1 style="text-align: center;color:#e8cfdc;">Search Result</h1>
+    <table border="1" style="text-align: center;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>{{.user.Id}}</td>
+            <td>{{.user.Name}}</td>
+            <td>{{.user.Age}}</td>
+            <td>
+                <a href="update.html?id={{.user.Id}}" class="button" style="background-color:rgb(138, 107, 185)">修改</a>
+                <button onclick="confirmDelete(this)" class="button" data-id="{{.user.Id}}" style="background-color:rgb(145, 168, 223)">删除</button>
+                <a href="/" class="button" style="background-color:rgb(145, 217, 223)">返回</a>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function confirmDelete(button) {
+            var id = button.getAttribute('data-id');
+
+            if (confirm("确定要删除该行数据吗？")) {
+                // 用户确认删除，可以将 id 发送到后端进行处理
+                console.log("用户确认删除,ID:" + id);
+
+                const data = { id: id };
+                // 这里可以继续添加发送到后端的逻辑
+                fetch('http://127.0.0.1:9000/changedelete', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then(response => {
+                    if (response.ok) {
+                      console.log('学生删除成功');
+                      //回到主界面
+                      window.location.href = 'http://127.0.0.1:9000';
+                    } else {
+                        console.error('删除失败');
+                    }
+                })
+                .catch(error => {
+                    console.error('发生错误：', error);
+                });
+
+            } else {
+                // 用户取消删除
+                console.log("用户取消删除");
+            }
+        }
+    </script>
+
+    <a href="add.html" style="text-align: center;color:#ffffff;"><h3>去添加？</h3></a>
+
+    <p style="text-align: center;left:750px;position:fixed;bottom:10px;font-size:12px;color:rgb(192, 178, 178);">Copyright © 2024 prexiouswxe.Powered by fhq. 
+    <br> All rights reserved.</p>
+</body>
+</html>

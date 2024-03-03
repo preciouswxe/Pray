@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="statics/66.jpg"/>
+    <link rel="stylesheet" href="statics/button.css">   <!-- 引入按钮的样式表 -->
+    <title>finaltask_student system</title>
+
+    <style>
+        p
+        {
+            text-align:center;
+        } 
+        body{
+        margin: 0;
+        /*object-fit: cover;*/
+        padding: 0;
+       
+        position: relative;
+        }
+        .background{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("statics/R-C.jpg")no-repeat center center/cover;
+        /*background-attachment: fixed;
+        background-size: cover; /* 可选，用于确保背景图片覆盖整个屏幕 */
+        /*background-repeat: no-repeat; /* 不重复 */
+        /*background-position:  center center; /* 居中 */
+        /*background-size: 100% 100%; /* 覆盖整个元素 */
+        /*background-attachment: fixed;*/
+        /*background-repeat:no-repeat;*/
+        z-index: -1; /* 将 z-index 设置为负值，使背景图片位于内容下方 */
+        }
+    </style>
+    
+    <!--设置头部图片位置、色块和阴影以及点击效果-->
+    <style>   
+        .img{
+            display: inline;
+            float: left;
+        }
+        .topnav {
+        /*overflow: hidden;*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        height: 45px;
+        background-image: linear-gradient(270deg, #e38fcf,rgb(245, 242, 242));
+        box-shadow:1px 2px 5px #867979;
+        }
+
+        /* 导航链接 */
+        .topnav a {
+        float: right;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+    }
+
+      /* 链接 - 修改颜色 */
+      .topnav a:hover {
+        background-color: #efd1e7;
+        color: black;
+    }
+    </style>
+
+    <!--表格-->
+    <style>
+        table {
+            margin: 0 auto; /* 设置表格水平居中 */
+            text-align: center; /* 设置表格内部内容水平居中 */
+            background-color:rgba(244, 245, 245, 0.587);
+            box-shadow:1px 2px 5px #867979;
+        }
+        th, td {
+            padding: 10px; /* 设置单元格内边距 */
+        }
+        th:nth-child(1) {
+        background-color: #f3dbe8; /* 第一列的背景颜色 */
+        color: rgb(109, 105, 105); /* 第一列文字颜色为白色 */
+        width: 200px;
+        }
+
+        th:nth-child(2) {
+        background-color: #ebc1e0; /* 第二列的背景颜色 */
+        color: rgb(109, 105, 105); /* 第二列文字颜色为白色 */
+        width: 200px;
+        }
+
+        th:nth-child(3) {
+        background-color: #dba0cd; /* 第三列的背景颜色 */
+        color: rgb(109, 105, 105); /* 第三列文字颜色为白色 */
+        width: 200px;
+        }
+
+        th:nth-child(4) {
+        background-color: #ad5c9a; /* 第三列的背景颜色 */
+        color: rgb(204, 200, 200); /* 第三列文字颜色为白色 */
+        width: 200px;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="topnav">
+        <div class="img">
+            <img src="statics/logoIcon.png" style="height: 60px;position: relative; top: px; left: 250px;" alt="无法显示">
+        </div>
+        <a href="#">排名</a>
+        <a href="#">评测记录</a>
+        <a href="#">讨论</a>
+        <a href="#">作业</a>
+        <a href="#">比赛</a>
+        <a href="#">训练</a>
+        <a href="#">题库</a>
+        <a href="#">首页</a>
+        <a href="http://hdufhq.cn:8888/"><p  style="color:#521154;position:fixed;top:0px;left:310px;">孵化器实验室</p></a>
+    </div>
+    
+    <br><br><br><br>
+
+    <form action="/question" method="get">
+        <input type="text" id="query" name="query" placeholder="  查询请输入20位内数字学号" 
+            style="position:relative;left: 650px;width:400px;height:35px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+            border-top: none;border-left: none;" required>   
+        <button class="button" style="position:relative;left: 610px;background-color:#e38fcf;">Search</button>
+        <img src="statics/sousuo.jpg" style="height: 35px;position: relative;width: 40px;left:463px;top:13px;opacity: 0.2;"><br><br>
+    </form>
+
+    <h1 style="text-align: center;color:#ca75a1;font-family: KaiTi;">学生信息系统</h1>
+    <p style="font-family:'Times New Roman', Times, serif;text-align: center;font-size:14px;color:rgb(186, 157, 178);"><i>DATABASE: localhost mysql</i></p>
+    <table border="1" style="text-align: center;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </tr>
+        {{range .}}
+        <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Age}}</td>
+            <td>
+                <a href="update.html?id={{.Id}}" class="button" style="background-color:rgb(138, 107, 185)">修改</a>
+                <button onclick="confirmDelete(this)" class="button" data-id="{{.Id}}" style="background-color:rgb(145, 168, 223)">删除</button>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+
+    <script>
+        function confirmDelete(button) {
+            var id = button.getAttribute('data-id');
+
+            if (confirm("确定要删除该行数据吗？")) {
+                // 用户确认删除，可以将 id 发送到后端进行处理
+                console.log("用户确认删除,ID:" + id);
+
+                const data = { id: id };
+                // 这里可以继续添加发送到后端的逻辑
+                fetch('http://127.0.0.1:9000/delete', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then(response => {
+                    if (response.ok) {
+                      console.log('学生删除成功');
+                      window.location.reload(); // 刷新当前页面
+                    } else {
+                        console.error('删除失败');
+                    }
+                })
+                .catch(error => {
+                    console.error('发生错误：', error);
+                });
+
+            } else {
+                // 用户取消删除
+                console.log("用户取消删除");
+            }
+        }
+    </script>
+
+    <a href="add.html" style="text-align: center;color:#f2f2f2;"><h3>去添加？</h3></a>
+
+    <p style="text-align: center;left:710px;position:fixed;bottom:10px;font-size:12px;color:rgb(192, 178, 178);">Copyright © 2024 prexiouswxe.Powered by fhq. 
+      <br> All rights reserved.</p>
+</body>
+</html>
